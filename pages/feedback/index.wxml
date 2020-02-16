@@ -1,0 +1,26 @@
+<view class="bigBox">
+  <view class="leixing">
+    <view class="title">选择问题类型</view>
+    <view class="pmains">
+      <view class="pitem">功能问题</view>
+      <view class="pitem">性能问题</view>
+      <view class="pitem">体验问题</view>
+      <view class="pitem">其他</view>
+    </view>
+  </view>
+  <view class="miaoshu">
+    <textarea placeholder="请描述一下你的问题"></textarea>
+  </view>
+  <view class="upimg">
+    <view class="imgtitle">上传图片（{{imgupNum}}/{{chooseImages.length}}）</view>
+    <view class="add">
+    <view class="addimg" bindtap="chooseimg">＋</view>
+    <view class="addmain" wx:for="{{chooseImages}}" wx:key="index">
+      <icon type="clear" color="red" size="15" bindtap="removeimg" data-index="{{index}}"></icon>
+      <image src="{{item}}"></image>
+    </view>
+    </view>
+    
+  </view>
+  <view class="tijiao" bindtap="upload">提交</view>
+</view>

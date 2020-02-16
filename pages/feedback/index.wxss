@@ -1,0 +1,95 @@
+.bigBox {
+  background-color: #f9f9f9;
+  height: 100vh;
+  padding: 20rpx 20rpx 0;
+}
+.bigBox .leixing {
+  background-color: #fff;
+  width: 711rpx;
+  height: 203rpx;
+  margin-bottom: 20rpx;
+  padding: 15rpx 29rpx;
+}
+.bigBox .leixing .title {
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+.bigBox .leixing .pmains {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bigBox .leixing .pmains .pitem {
+  font-size: 20rpx;
+  height: 46rpx;
+  width: 181rpx;
+  background-color: #ededed;
+  border-radius: 23rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 47rpx 20rpx 0;
+}
+.bigBox .leixing .pmains .pitem:nth-child(3n) {
+  margin-right: 0;
+}
+.bigBox .miaoshu {
+  background-color: #fff;
+  width: 711rpx;
+  height: 391rpx;
+  padding: 20rpx 29rpx;
+  margin-bottom: 20rpx;
+}
+.bigBox .miaoshu textarea {
+  width: 100%;
+  font-size: 26rpx;
+  line-height: 37rpx;
+}
+.bigBox .upimg {
+  width: 711rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.bigBox .upimg .imgtitle {
+  font-size: 26rpx;
+  margin-bottom: 15rpx;
+}
+.bigBox .upimg .add {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bigBox .upimg .add .addimg {
+  width: 128rpx;
+  height: 128rpx;
+  background-color: #ededed;
+  text-align: center;
+  line-height: 128rpx;
+  font-size: 100rpx;
+  color: #ccc;
+  margin: 0 0 7rpx 7rpx;
+}
+.bigBox .upimg .add .addmain {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 0 0 7rpx 7rpx;
+  position: relative;
+}
+.bigBox .upimg .add .addmain image {
+  width: 100%;
+  height: 100%;
+}
+.bigBox .upimg .add .addmain icon {
+  position: absolute;
+  top: -5rpx;
+  right: -5rpx;
+}
+.bigBox .tijiao {
+  margin-top: 20rpx;
+  width: 711rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 70rpx;
+  background-color: #eb4450;
+  text-align: center;
+  color: #fff;
+}

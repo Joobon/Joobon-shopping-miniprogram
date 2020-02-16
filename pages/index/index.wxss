@@ -1,0 +1,105 @@
+.nav{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4450
+}
+.search{
+  background-color: white;
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #767676
+}
+.page-section{
+  height: 340rpx
+}
+swiper-item image{
+  width: 100%;
+  height: 100%
+}
+swiper{
+  height: 340rpx
+}
+.nList{
+  display: flex
+}
+.nList-item{
+  flex:25%;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx
+}
+.imgs{
+  width: 128rpx;
+  height: 140rpx;
+}
+
+ .floor{
+    margin-top: 30rpx;
+    padding:0rpx 15rpx;
+    width: 750rpx
+}
+.floor_item{
+  margin-top:10rpx 
+}
+.title{
+  height: 59rpx;
+  width: 100%
+}
+/* 一次全部请求回来 */
+/*.main{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-between; 
+   position: relative; 
+}
+.left{
+flex:33.33%;
+  width: 232rpx;
+  height: 188rpx;
+  margin-right: 10rpx
+}
+navigator:nth-child(1) .left{
+  height: 386rpx
+}
+navigator:nth-child(3) .left,
+navigator:nth-child(5) .left{
+  margin-right:0rpx
+}
+navigator:nth-child(4){
+  position: absolute;
+  top: 200rpx;
+  left: 245rpx
+}
+navigator:nth-child(5){
+  position: absolute;
+  top: 200rpx;
+  left: 490rpx
+} */
+.main{
+  display: flex;
+}
+
+.left{
+  flex:33.33%;
+  width: 232rpx;
+  margin-right: 10rpx
+}
+.rigbig{
+  display: flex;
+ flex-flow:row wrap;
+}
+navigator:nth-child(1) .right,
+navigator:nth-child(3) .right{
+  margin-right:10rpx
+}
+.right{
+  width:232rpx;
+  height: 188rpx;
+}

@@ -1,0 +1,22 @@
+.allOrder {
+  background-color: #eee;
+  height: 100%;
+  margin-top: 15rpx;
+}
+.allOrder .allItem {
+  height: 250rpx;
+  width: 750rpx;
+  background-color: #fff;
+  margin-bottom: 13rpx;
+  padding: 35rpx;
+}
+.allOrder .allItem .item1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.allOrder .allItem .item1 .item13 {
+  color: #EA4350;
+}

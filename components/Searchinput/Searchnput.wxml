@@ -1,0 +1,4 @@
+<view class="nav">
+  <view class="search" bindtap="searchpage">{{title}}</view>
+</view>
+<!-- <view bindtap="uuur">子传父</view> -->

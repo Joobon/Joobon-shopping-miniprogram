@@ -1,0 +1,23 @@
+<view class="bigBox">
+  <Tabs tabs="{{tabs}}" bindchangeIndex="changeIndex" />
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="allOrder" wx:for="{{order}}" wx:key="order_id">
+      <view class="allItem">
+        <view class="item1">
+          <view class="item11">订单编号</view>
+          <view class="item12">{{item.order_number}}</view>
+        </view>
+        <view class="item1">
+          <view class="item11">订单金额</view>
+          <view class="item13">￥{{item.order_price}}</view>
+        </view>
+        <view class="item1">
+          <view class="item11">订单日期</view>
+          <view class="item12">￥{{item.create_time_cn}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="waitOrder" wx:elif="{{tabs[1].isActive}}">2</view>
+  <view class="waitGoods" wx:else="{{tabs[2].isActive}}">3</view>
+</view>

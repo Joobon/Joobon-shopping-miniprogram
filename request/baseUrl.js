@@ -1,0 +1,1 @@
+export const baseURL ="https://www.linweiqin.cn/api/public/v1"

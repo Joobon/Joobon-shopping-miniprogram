@@ -1,0 +1,25 @@
+<view class="sear">
+  <view class="searchinput">
+    <icon type="search" size="20"></icon>
+    <input placeholder="输入商品名"
+      bindinput="valueChange"
+      value="{{}}"   
+    ></input>
+  </view>
+  <view class="searchbtn" bindtap="searchGo">搜索</view>
+</view>
+<view class="onetab">
+  <navigator class="goodslist" wx:for="{{searchList}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+  <!-- 图片结构 -->
+  <view class="goodsimg">
+    <image class="imgs"  mode="widthFix"                      
+    src="http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000826147951_1_400x400.jpg">
+    </image>
+  </view>
+  <!-- 文字结构 -->
+  <view class="goodsmain">
+  <view class="onezi">{{item.goods_name}}</view>
+  <!-- <view class="twozi">￥{{item.goods_price}}</view> -->
+  </view>
+  </navigator>
+</view>

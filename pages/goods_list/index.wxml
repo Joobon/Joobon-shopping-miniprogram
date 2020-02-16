@@ -1,0 +1,26 @@
+<view>
+<Searchinput title="搜索"/>
+<view>
+<Tabs tabs='{{tabs}}' bindchangeIndex="hanldetape">
+<block wx:if='{{tabs[0].isActive}}'>
+<view class="onetab">
+  <navigator class="goodslist" wx:for="{{goodsList}}" wx:key="goods_id" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+  <!-- 图片结构 -->
+  <view class="goodsimg">
+    <image class="imgs"  mode="widthFix"                      
+    src="{{item.goods_small_logo?item.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000826147951_1_400x400.jpg'}}">
+    </image>
+  </view>
+  <!-- 文字结构 -->
+  <view class="goodsmain">
+  <view class="onezi">{{item.goods_name}}</view>
+  <view class="twozi">￥{{item.goods_price}}</view>
+  </view>
+  </navigator>
+</view>
+</block>
+<block wx:elif='{{tabs[1].isActive}}'>2</block>
+<block wx:else='{{tabs[2].isActive}}'>3</block>
+</Tabs>
+</view>
+</view>

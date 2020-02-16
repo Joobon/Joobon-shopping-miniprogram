@@ -1,0 +1,42 @@
+<view wx:if="{{carList.length}}" class="bigBox">
+  <view class="carlist">
+    <!-- <view class="title">已选购商品</view> -->
+    <view class="buymain" wx:for="{{carList}}" wx:key="index">
+      <view class="{{item.buyIt?'iconfont icon-quangou buyy':'iconfont icon-circle'}}" bindtap="noBuy" data-id="{{item.dataList.goods_id}}"></view>
+      <view class="goodslist">
+        <navigator class="goodsimg" url="/pages/goods_detail/index?goods_id={{item.dataList.goods_id}}">
+          <image class="imgs" mode="widthFix" src="{{item.dataList.goods_small_logo?item.dataList.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000826147951_1_400x400.jpg'}}">
+          </image>
+        </navigator>
+     
+        <view class="goodsmain">
+          <navigator class="onezi"  url="/pages/goods_detail/index?goods_id={{item.dataList.goods_id}}">{{item.dataList.goods_name}}</navigator>
+          <view class="twozi">
+            <view class="twozi1">￥{{item.dataList.goods_price}}</view>
+            <view class="twozi2">
+              <view class="btn" bindtap="down" data-id="{{item.dataList.goods_id}}" data-num="{{-1}}">-</view>
+              <view class="btn">{{item.addNum}}</view>
+              <view class="btn" bindtap="down" data-id="{{item.dataList.goods_id}}" data-num="{{1}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else class="kongcar">
+  <image  src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+  <view class="wen1">购物车居然是空的</view>
+  <view class="wen2">再忙，也记得买点什么犒赏一下自己</view>
+  <navigator open-type="switchTab" url="/pages/category/index">去逛逛</navigator>
+</view>
+<view class="money">
+  <view class="money1">
+  <view class="{{allBuy?'iconfont icon-quangou buyy':'iconfont icon-circle'}}" bindtap="buybuy"></view>
+    <text>全选</text>
+  </view>
+  <view class="money2">合计(包含运费):
+    <text>￥{{totalPrice}}</text>
+  </view>
+  <navigator class="{{totalNum===0?'money4':'money3'}}" url="{{totalNum===0?'':'/pages/pay/index'}}">结算({{totalNum}})</navigator>
+</view>

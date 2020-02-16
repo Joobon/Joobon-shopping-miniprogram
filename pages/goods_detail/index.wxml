@@ -1,0 +1,48 @@
+<view class="bigBox">
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots='true' autoplay="true" interval="3000" duration="500">
+      <view wx:for="{{dataList.pics}}" wx:key="pics_id">
+        <swiper-item>
+          <image mode="widthFix" src="{{item.pics_mid_url}}" data-src="{{item.pics_mid_url}}" bindtap="bigimg"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view class="mains">
+    <view class="wmains">
+      <view class="top">￥{{dataList.goods_price}}</view>
+      <view class="xia">
+        <view class="zuo">{{dataList.goods_name}}
+        </view>
+        <view class="you" bindtap="like">
+          <view class="{{likes?'iconfont icon-shoucang1':'iconfont icon-shoucang2 like'}}"></view>
+          <view class="care">收藏</view>
+        </view>
+      </view>
+    </view>
+    <view class="tmains">
+      <view class="title">图文详情</view>
+      <rich-text class="two" nodes="{{dataList.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="tel">
+   <view class="iconfont icon-lianxikefu"></view>
+   <view>联系客服</view>
+   <button open-type="contact"></button>
+  </view>
+  <view class="share">
+    <view class="iconfont icon-share"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator class="car" 
+    open-type="switchTab" 
+    url="/pages/cart/index">
+    <view class="iconfont icon-gouwuche-"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="addcar" bindtap="addCar">加入购物车</view>
+  <navigator class="buy" url="/pages/pay/index">立即购买</navigator>
+</view>

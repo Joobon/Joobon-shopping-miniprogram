@@ -1,0 +1,19 @@
+.nav{
+  /* width: 100%; */
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4450
+}
+.search{
+  background-color: white;
+  width: 700rpx;
+  height: 80rpx;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #767676
+}

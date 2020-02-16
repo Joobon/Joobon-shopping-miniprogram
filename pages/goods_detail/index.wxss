@@ -1,0 +1,107 @@
+image {
+  width: 50%;
+}
+swiper {
+  height: 400rpx;
+}
+swiper-item {
+  text-align: center;
+}
+.mains {
+  padding: 0 20rpx;
+}
+.mains .wmains .top {
+  padding: 0 20rpx;
+  color: red;
+}
+.mains .wmains .xia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.mains .wmains .xia .zuo {
+  flex: 12;
+  font-size: 30rpx;
+  height: 85rpx;
+  padding-right: 20rpx;
+  border-right: 2rpx solid #000;
+  font-weight: 400;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.mains .wmains .xia .you {
+  flex: 3;
+  text-align: center;
+  font-size: 25rpx;
+}
+.mains .wmains .xia .you .iconfont {
+  font-size: 60rpx;
+}
+.mains .tmains {
+  background-color: #ddd;
+  padding-top: 20rpx;
+  padding-bottom: 85rpx;
+}
+.mains .tmains .title {
+  padding-left: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  color: red;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 94rpx;
+}
+.footer .tel,
+.footer .share {
+  flex: 1;
+  font-size: 22rpx;
+  position: relative;
+}
+.footer .tel button,
+.footer .share button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.footer .tel .iconfont,
+.footer .share .iconfont {
+  font-size: 50rpx;
+}
+.footer .car {
+  flex: 1;
+  font-size: 22rpx;
+}
+.footer .car .iconfont {
+  font-size: 50rpx;
+}
+.footer .addcar,
+.footer .buy {
+  flex: 2;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 94rpx;
+}
+.footer .addcar {
+  background-color: orange;
+}
+.footer .buy {
+  background-color: red;
+}
+.like {
+  color: red;
+}

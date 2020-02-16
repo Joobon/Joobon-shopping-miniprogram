@@ -1,0 +1,62 @@
+<view class="bigBox">
+  <view class="bgimg">
+    <block wx:if="{{userInfo.nickName}}">
+    <view class="bgimage">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="touxiang">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="nickname">{{userInfo.nickName}}</view>
+    </view>
+    </block>  
+    <block wx:else>
+    <button class="login" plain open-type="getUserInfo" type="warn" bindgetuserinfo="hanlderInfo" >登陆</button>
+    </block>  
+  </view>
+  <view class="nav">
+    <navigator url="/pages/order/index?type=1" class="itemone">
+      <view class="iconfont icon-icon-test"></view>
+      <view class="name">待付款</view>
+    </navigator>
+    <navigator url="/pages/order/index?type=1" class="itemone">
+      <view class="iconfont icon-daishouhuo"></view>
+      <view class="name">待收货</view>
+    </navigator>
+    <navigator url="/pages/order/index?type=1" class="itemone">
+      <view class="iconfont icon-refund"></view>
+      <view class="name">退货/退款</view>
+    </navigator>
+    <navigator url="/pages/order/index?type=1" class="itemone">
+      <view class="iconfont icon-dingdan"></view>
+      <view class="name">全部订单</view>
+    </navigator>
+  </view>
+  <view class="footer">
+  <view class="footer_item">
+    <view class="left">
+    <view class="iconfont icon-lianxikefu"></view>
+    <view class="title">联系客服</view>
+    </view>
+    <view class="right">
+    400-618-4000
+    </view>
+  </view>
+  <navigator class="footer_item" url="/pages/feedback/index">
+    <view class="left">
+    <view class="iconfont icon-yijianfankui"></view>
+    <view class="title">意见反馈</view>
+    </view>
+    <view class="right">
+    </view>
+  </navigator>
+  <view class="footer_item">
+    <view class="left">
+    <view class="iconfont icon-ziyuan"></view>
+    <view class="title">当前版本</view>
+    </view>
+    <view class="right">
+    v4.1.1
+    </view>
+  </view>
+  </view>
+</view>

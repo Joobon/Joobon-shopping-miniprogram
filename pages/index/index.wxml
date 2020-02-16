@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<!-- 子传父 -->
+<!-- <Searchinput title="{{'搜索'}}" bind:iii='oooo' /> -->
+<!-- 引用组件  title父向子传值   -->
+<Searchinput title="{{'搜索'}}" />
+<!-- 轮播图 -->
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots='true' autoplay="true" interval="2000" duration="500">
+    <view wx:for="{{lunbo}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <swiper-item>
+          <!-- <view class="swiper-item">{{item.image_src}}</view> -->
+          <image mode="widthFix" src="{{item.image_src}}"></image>
+        </swiper-item>
+      </navigator>
+    </view>
+  </swiper>
+</view>
+<!-- 分类导航 -->
+<view class="nList">
+  <block wx:for="{{navList}}" wx:key="index">
+    <view class="nList-item" >
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image class="imgs" src="{{item.image_src}}"></image>
+      </navigator>
+    </view>
+  </block>
+</view>
+<!-- 楼层 -->
+<!-- <view class="floor">
+  <view class="floor_item" wx:for="{{floorList}}" wx:key="index">
+    <image class="title" src="{{item.floor_title.image_src}}"></image>
+    <view class="main" >
+      <navigator url="{{v.navigator_url}}" open-type="{{v.open_type}}" wx:for="{{item.product_list}}" wx:key="i" wx:for-index="i" wx:for-item="v">
+        <image class="left"  src="{{v.image_src}}" ></image>
+      </navigator>
+    </view>
+  </view>
+</view> -->
+<view class="floor">
+  <view class="floor_item" wx:for="{{floorList}}" wx:key="index">
+    <image class="title" src="{{item.floor_title.image_src}}"></image>
+    <view class="main">
+      <navigator url="{{item.product_list[0].navigator_url}}" open-type="{{item.product_list[0].open_type}}">
+        <image class="left" mode="widthFix" src="{{item.product_list[0].image_src}}"></image>
+      </navigator>
+      <view class="rigbig">
+        <navigator url="{{v.navigator_url}}" open-type="{{v.open_type}}" wx:for="{{item.product_list}}" wx:key="i" wx:for-index="i" wx:for-item="v" wx:if='{{i!=0}}'>
+          <image class="right" src="{{v.image_src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

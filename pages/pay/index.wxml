@@ -1,0 +1,41 @@
+<view class="bigBox">
+  <view class="address">
+      <view class="address_item1" wx:if="{{address.all}}">
+        <view class="addressAll">{{address.all}}</view>
+        <view class="name_tel">
+          <text class="name">{{address.userName}}</text>
+          <text class="tel">{{address.telNumber}}</text>
+        </view>
+        <view class="changeAddress" bindtap="address">更换地址</view>
+      </view>
+      <view class="address_item" wx:else bindtap="address">添加地址</view>
+    </view>
+  <view class="carlist">
+    <view class="title">已选购商品</view>
+    <view class="buymain" wx:for="{{yigou}}" wx:key="index">
+      <view class="goodslist">
+        <view class="goodsimg" url="/pages/goods_detail/index?goods_id={{item.dataList.goods_id}}">
+          <image class="imgs" mode="widthFix" src="{{item.dataList.goods_small_logo?item.dataList.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000826147951_1_400x400.jpg'}}">
+          </image>
+        </view>
+        <view class="goodsmain">
+          <view class="onezi"  url="/pages/goods_detail/index?goods_id={{item.dataList.goods_id}}">{{item.dataList.goods_name}}</view>
+          <view class="twozi">
+            <view class="twozi1">￥{{item.dataList.goods_price}}</view>
+            <view class="twozi2">
+              <view class="btn">X{{item.addNum}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="money">
+  <view class="money2">合计(包含运费):
+    <text>￥{{totalPrice}}</text>
+  </view>
+  <view wx:if="{{address.all&&totalPrice}}" class="money3" bindtap="payMoney">去支付({{totalNum}})
+  </view> 
+  <view wx:else class="money4">去支付({{totalNum}})</view>
+</view>

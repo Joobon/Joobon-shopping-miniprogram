@@ -1,0 +1,30 @@
+<view class="top">
+  <Searchinput title="{{'搜索'}}"/>
+  <view class="big">
+    <scroll-view scroll-y class="leftBox">
+      <view class="left_item {{index===changedd?'ding':''}}" bindtap="changeId" wx:for="{{navList}}" wx:key="index" data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y class="rightBox" scroll-top="{{scrollTop}}">
+      <view class="right_item"  wx:for="{{rightList}}" wx:for-index="index1" wx:for-item="item1" wx:key="cat_id">
+        <view class="title">
+        <text class="gang">/</text>
+        <text class="ti">{{item1.cat_name}}</text>
+        <text class="gang">/</text>
+        </view>
+        <view class="listmain">
+        <navigator class="main" 
+        wx:for="{{item1.children}}" 
+        wx:for-index="index2" 
+        wx:for-item="item2" 
+        wx:key="cat_id"
+        url="/pages/goods_list/index?cid={{item2.cat_id}}">
+        <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+        <view>{{item2.cat_name}}</view>
+        </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

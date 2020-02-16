@@ -1,0 +1,146 @@
+.bigBox {
+  background-color: #eee;
+  padding: 21rpx 19rpx 0rpx;
+}
+.bigBox .address {
+  background-color: #fff;
+  width: 711rpx;
+  height: 187rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigBox .address .address_item1 {
+  padding: 20rpx;
+}
+.bigBox .address .address_item1 .addressAll {
+  font-size: 30rpx;
+  line-height: 40rpx;
+  font-weight: 700;
+  margin-bottom: 30rpx;
+}
+.bigBox .address .address_item1 .name_tel {
+  font-size: 26rpx;
+  line-height: 37rpx;
+}
+.bigBox .address .address_item1 .name_tel .name {
+  margin-right: 30rpx;
+}
+.bigBox .address .address_item1 .changeAddress {
+  font-size: 25rpx;
+  float: right;
+  color: skyblue;
+}
+.bigBox .address .address_item {
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  border: 2rpx solid #EA4350;
+  color: #EA4350;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigBox .carlist {
+  min-height: calc(100vh - 240rpx);
+  padding-bottom: 90rpx;
+  background-color: #fff;
+}
+.bigBox .carlist .title {
+  width: 100%;
+  height: 80rpx;
+  padding: 15rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.bigBox .carlist .buymain {
+  display: flex;
+  padding: 0rpx 20rpx;
+}
+.bigBox .carlist .buymain .goodslist {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.bigBox .carlist .buymain .goodslist .goodsimg {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.bigBox .carlist .buymain .goodslist .goodsimg .imgs {
+  width: 70%;
+}
+.bigBox .carlist .buymain .goodslist .goodsmain {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.bigBox .carlist .buymain .goodslist .goodsmain .onezi {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.bigBox .carlist .buymain .goodslist .goodsmain .twozi {
+  display: flex;
+  justify-content: space-between;
+  color: #EA4350;
+}
+.bigBox .carlist .buymain .goodslist .goodsmain .twozi .twozi2 {
+  margin-right: 30rpx;
+  display: flex;
+  font-size: 30rpx;
+}
+.bigBox .carlist .buymain .goodslist .goodsmain .twozi .twozi2 .btn {
+  width: 50rpx;
+  height: 45rpx;
+  line-height: 40rpx;
+  color: gray;
+  text-align: center;
+  border: none;
+}
+.money {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 83rpx ;
+  width: 100%;
+  font-size: 30rpx;
+}
+.money .money2 {
+  margin-left: 20rpx;
+  flex: 6;
+  display: flex;
+  align-items: center;
+}
+.money .money2 text {
+  color: #eb4450;
+}
+.money .money3 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4450;
+  color: #FFFFFF;
+  border-radius: 100rpx ;
+  height: 50rpx;
+  margin-right: 50rpx;
+}
+.money .money4 {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  color: #FFFFFF;
+  border-radius: 100rpx ;
+  height: 50rpx;
+  margin-right: 50rpx;
+}
